@@ -1,7 +1,10 @@
-public class Vehicle {
+class Vehicle {
     private String name;
     private double tankCapacity;
     private double averageFuelConsumption;
+
+    public Vehicle() {
+    }
 
     public Vehicle(String name, double tankCapacity, double averageFuelConsumption) {
         this.name = name;
@@ -38,11 +41,11 @@ public class Vehicle {
     }
 
     public String getInfo() {
-        return "Nazwa pojazdu: " + name + ", pojemność silnika: " + tankCapacity + " l"
+        return "Nazwa pojazdu: " + getName() + ", pojemność silnika: " + getTankCapacity() + " l"
                 + ", średnie spalanie: " + averageFuelConsumption + " l/100 km ";
     }
 
-    public void getRangeInfo(Vehicle vehicle) {
+    public void getRangeInfo() {
         System.out.printf("%s %.3f\n", "Zasięg pojazdu: ", range());
     }
 }
